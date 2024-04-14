@@ -21,7 +21,7 @@ docker run -itd -p 8080:8080 --name ros-vnc ros-vnc
 ```
 
 ### 4. Enjoy ROS2 in your Docker container!
-Run `rviz2` and connect to http://localhost:8080/vnc.html to test your environment.
+Connect to http://localhost:8080/vnc.html and run `rviz2` to test your environment.
 ```bash
 rviz2
 ```
