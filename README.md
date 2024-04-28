@@ -17,17 +17,17 @@ brew install colima
 
 ### 3. Start colima
 ```bash
-colima start --arch x86_64
+colima start --arch aarch64 --vm-type=vz --vz-rosetta
 ```
 
 ### 4. Build Image
 ```bash
-docker build --no-cache -t ros-vnc .
+docker build --platform linux/amd64 --no-cache -t ros-vnc .
 ```
 
 ### 5. Run Container
 ```bash
-docker run -itd -p 8080:8080 --name ros-vnc ros-vnc
+docker run --platform linux/amd64 -itd -p 8080:8080 --name ros-vnc ros-vnc
 ```
 
 ### 6. Enjoy ROS2 in your Docker container!
